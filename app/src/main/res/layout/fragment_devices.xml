@@ -1,0 +1,310 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.example.vuphu.iot_nckh.DevicesFragment">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:gravity="center_vertical"
+            android:weightSum="3"
+            android:orientation="horizontal">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:tint="@color/colorPrimary"
+
+                android:src="@drawable/icon_tram"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="2"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:id="@+id/tv_name"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:text="Trạm số 1"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_time"
+                    android:text="24/10/2018"/>
+            </LinearLayout>
+            <LinearLayout
+            android:layout_width="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_height="match_parent">
+
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_height="wrap_content">
+                <Button
+                    android:layout_width="match_parent"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_update"
+                    android:shadowRadius="10"
+                    android:background="@drawable/round_button"
+                    android:text="Cập nhật"/>
+                <Button
+                    android:layout_width="match_parent"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_edit"
+                    android:text="Sửa"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@color/colorPrimary"
+            android:layout_height="wrap_content">
+            <com.github.mikephil.charting.charts.LineChart
+                android:layout_width="match_parent"
+                android:id="@+id/chart"
+                android:contentDescription="Chart of Trạm số 1"
+                android:layout_height="180dp">
+
+            </com.github.mikephil.charting.charts.LineChart>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="16dp"
+                    android:textColor="@android:color/black"
+                    android:text="Thông số cảm biến"
+                    />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_margin="8dp">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:layout_margin="5dp"
+                    app:cardElevation="@dimen/cardElevation"
+                    app:cardCornerRadius="8dp"
+                    android:padding="10dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        android:layout_gravity="center">
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/temp_icon"
+                            android:layout_marginTop="20dp"
+                            android:layout_gravity="center"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="18dp"
+                            android:id="@+id/tv_number_temp"
+                            android:textColor="@android:color/black"
+                            android:text="25 độ"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|bottom"
+                            android:layout_marginTop="10dp"
+
+                            android:textColor="@android:color/black"
+                            android:text="Nhiệt dộ"
+                            />
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:layout_margin="5dp"
+                    app:cardElevation="@dimen/cardElevation"
+                    app:cardCornerRadius="8dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+
+                        android:orientation="vertical"
+                        android:layout_gravity="center">
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="20dp"
+                            android:src="@drawable/humd_icon"
+                            android:layout_gravity="center"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="18dp"
+                            android:id="@+id/tv_number_humd"
+                            android:textColor="@android:color/black"
+                            android:text="75%"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textColor="@android:color/black"
+                            android:text="Độ ẩm đất"
+                            android:textAlignment="center"
+                            />
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_margin="8dp"
+                android:weightSum="2">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="8dp"
+                    android:clickable="true"
+                    android:layout_margin="5dp"
+                    app:cardElevation="@dimen/cardElevation"
+                    android:foreground="?attr/selectableItemBackground"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        android:layout_gravity="center_vertical">
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/water_icon"
+                            android:layout_gravity="center"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="18dp"
+                            android:id="@+id/tv_number_water"
+                            android:textColor="@android:color/black"
+                            android:text="75 lít"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="20dp"
+                            android:textColor="@android:color/black"
+                            android:text="Lượng nước"
+                            />
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:layout_margin="5dp"
+                    app:cardElevation="@dimen/cardElevation"
+                    app:cardCornerRadius="8dp"
+                    android:layout_weight="1">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center_vertical">
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/good_icon"
+                            android:id="@+id/img_air"
+                            android:layout_gravity="center"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="18dp"
+                            android:id="@+id/tv_number_air"
+                            android:textColor="@android:color/black"
+                            android:text="25 %"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textColor="@android:color/black"
+                            android:text="Chất lượng không khí"
+                            />
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
+</android.support.design.widget.CoordinatorLayout>

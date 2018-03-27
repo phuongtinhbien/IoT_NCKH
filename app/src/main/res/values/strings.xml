@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">IoT_NCKH</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Devices</string>
+    <string name="title_notifications">Person</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Không có thông báo dành cho bạn</string>
+
+    <string name="title_activity_walkthrough">WalkthroughActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+</resources>
